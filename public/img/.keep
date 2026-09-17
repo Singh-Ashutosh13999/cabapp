@@ -1,0 +1,1 @@
+# This file ensures the img directory is tracked by Git. You can place your images in this folder and reference them using `/img/your-image.jpg` in your components.
