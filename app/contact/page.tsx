@@ -63,7 +63,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-950 pt-32 pb-16">
+    <div className="min-h-screen bg-zinc-950 pt-32 pb-16 mt-[-100px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-serif text-white mb-6 uppercase tracking-wider">Contact Us</h1>
         <p className="text-xl text-zinc-400 max-w-2xl mx-auto font-light">

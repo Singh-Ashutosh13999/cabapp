@@ -8,12 +8,12 @@ interface CabHeroProps {
 
 export default function CabHero({ title, description, imageUrl }: CabHeroProps) {
   return (
-    <div className="bg-white rounded-t-2xl shadow-sm overflow-hidden border-b border-gray-100">
+    <div className="bg-white rounded-t-2xl shadow-sm overflow-hidden border-b border-gray-100 ">
       {imageUrl && (
         <div className="w-full h-64 md:h-80 relative">
-          <img 
-            src={imageUrl} 
-            alt={title} 
+          <img
+            src={imageUrl}
+            alt={title}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
