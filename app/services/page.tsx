@@ -14,7 +14,7 @@ export default function ServicesPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H12c-.6 0-1.2.3-1.6.8L8.5 10c0 0-2.7.6-4.5 1.1-.8.2-1.5 1-1.5 1.9v3c0 .6.4 1 1 1h2m13 0a2 2 0 11-4 0 2 2 0 014 0zm-11 0a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       ),
-      link: '/city-taxi',
+      link: '/services/city',
     },
     {
       title: 'Airport Transfer',
@@ -24,7 +24,7 @@ export default function ServicesPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      link: '/airport-transfer',
+      link: '/services/airport',
     },
     {
       title: 'Outstation Cabs',
@@ -34,7 +34,7 @@ export default function ServicesPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
         </svg>
       ),
-      link: '/outstation',
+      link: '/services/outstation',
     },
     {
       title: 'Corporate Rentals',
@@ -44,7 +44,7 @@ export default function ServicesPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
-      link: '/corporate',
+      link: '/services/corporate',
     },
   ];
 

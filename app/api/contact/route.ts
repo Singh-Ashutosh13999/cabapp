@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     // Email to the website/admin
     await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: process.env.BOOKING_EMAIL || "support@cabconnect.in", // Use booking email or a fallback
+      to: process.env.BOOKING_EMAIL || "support@yatrasaathi.in", // Use booking email or a fallback
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -34,13 +34,13 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: "onboarding@resend.dev",
       to: email,
-      subject: `Thank you for contacting CabConnect`,
+      subject: `Thank you for contacting YatraSaathi`,
       html: `
         <h2>Hi ${firstName},</h2>
         <p>Thank you for reaching out to us. We have received your message regarding "${service || 'our services'}" and one of our representatives will get back to you shortly.</p>
         <br/>
         <p>Best Regards,</p>
-        <p>CabConnect Team</p>
+        <p>YatraSaathi Team</p>
       `,
     });
 

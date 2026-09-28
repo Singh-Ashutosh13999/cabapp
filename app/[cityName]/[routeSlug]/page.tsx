@@ -3,6 +3,30 @@ import { notFound } from 'next/navigation';
 import { routes } from '@/data/cabsData';
 import BookingForm from './BookingForm';
 
+const landmarkImages = [
+  "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1585135402096-7c0506eb3a77?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1564507592224-2fc8c614b433?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1506461883276-594c397e4114?auto=format&fit=crop&w=800&q=80"
+];
+
+const foodImages = [
+  "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1625398407796-a29b05786ed8?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1589301760014-d929f39ce9de?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80"
+];
+
+function getImageForRoute(slug: string, images: string[]) {
+  let hash = 0;
+  for (let i = 0; i < slug.length; i++) {
+    hash = slug.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  const index = Math.abs(hash) % images.length;
+  return images[index];
+}
 export function generateStaticParams() {
   return routes.map((route) => ({
     routeSlug: route.slug,
@@ -104,6 +128,70 @@ export default async function RoutePage({ params }: RoutePageProps) {
 
                 <BookingForm route={route} />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Added Content Section */}
+      <section className="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-20">
+        <div className="bg-white rounded-2xl shadow-xl border border-zinc-100 p-8 md:p-12 mb-12">
+          <h2 className="text-3xl font-serif text-zinc-900 mb-6">About the Journey from {route.from} to {route.to}</h2>
+          <p className="text-zinc-600 leading-relaxed font-light mb-6">
+            Traveling from {route.from} to {route.to} is more than just a commute; it is an experience of comfort and scenic beauty. 
+            Whether you are traveling for business or leisure, our premium cab service ensures a smooth, uninterrupted ride.
+            Enjoy the changing landscapes as you recline in our well-maintained, air-conditioned vehicles, driven by professional chauffeurs.
+          </p>
+
+          <h3 className="text-2xl font-serif text-zinc-900 mb-4 mt-10">Famous Landmarks Along the Way</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div className="bg-zinc-50 rounded-xl overflow-hidden shadow-sm border border-zinc-100">
+              <img src={getImageForRoute(route.slug, landmarkImages)} alt={`Landmarks near ${route.to}`} className="w-full h-48 object-cover" />
+              <div className="p-4">
+                <h4 className="text-lg font-bold text-zinc-900">Historical Monuments in {route.to}</h4>
+                <p className="text-zinc-600 text-sm mt-2">Discover ancient structures and beautiful architecture during your trip.</p>
+              </div>
+            </div>
+            <div className="bg-zinc-50 rounded-xl overflow-hidden shadow-sm border border-zinc-100">
+              <img src={getImageForRoute(route.slug, foodImages)} alt="Local Cuisine" className="w-full h-48 object-cover" />
+              <div className="p-4">
+                <h4 className="text-lg font-bold text-zinc-900">Highway Dhabas & Local Cuisine</h4>
+                <p className="text-zinc-600 text-sm mt-2">Stop by famous local eateries to experience authentic regional cuisine on the way to {route.to}.</p>
+              </div>
+            </div>
+          </div>
+
+          <h3 className="text-2xl font-serif text-zinc-900 mb-4 mt-10">Fare Breakdown & Route Details</h3>
+          <div className="overflow-x-auto mb-8">
+            <table className="min-w-full divide-y divide-zinc-200 border border-zinc-200 rounded-lg overflow-hidden">
+              <thead className="bg-zinc-50">
+                <tr>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-zinc-500 uppercase tracking-wider">Vehicle Type</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-zinc-500 uppercase tracking-wider">Passengers</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-zinc-500 uppercase tracking-wider">Estimated Fare</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-zinc-500 uppercase tracking-wider">Features</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-zinc-200">
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-zinc-900">Sedan</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-zinc-500">Up to 4</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-zinc-500">₹{route.price}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-zinc-500">AC, Free Wi-Fi, Water</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-zinc-900">SUV</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-zinc-500">Up to 6</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-zinc-500">₹{route.price + 1500}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-zinc-500">Extra Luggage, AC, Premium Seats</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-zinc-900">Luxury</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-zinc-500">Up to 4</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-zinc-500">₹{route.price * 2}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-zinc-500">Leather Seats, Refreshments</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>

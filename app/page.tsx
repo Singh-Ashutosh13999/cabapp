@@ -212,12 +212,12 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">Experience True Luxury</h2>
           <p className="text-xl text-zinc-400 mb-12 max-w-2xl mx-auto font-light">Book your next journey with us and discover the difference of uncompromising quality and service.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <button className="px-10 py-4 bg-amber-500 text-zinc-950 font-bold tracking-wide uppercase text-sm shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] hover:bg-amber-400 transition-all duration-300">
-              WhatsApp Now
-            </button>
-            <button className="px-10 py-4 bg-transparent border border-zinc-600 text-white font-bold tracking-wide uppercase text-sm hover:border-white hover:bg-white/5 transition-all duration-300">
+            <a href="tel:+917839656268">   <button className="px-10 py-4 bg-amber-500 text-zinc-950 font-bold tracking-wide uppercase text-sm shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] hover:bg-amber-400 transition-all duration-300">
               Call Concierge
-            </button>
+            </button></a>
+            <a href="https://wa.me/7839656268">  <button className="px-10 py-4 bg-transparent border border-zinc-600 text-white font-bold tracking-wide uppercase text-sm hover:border-white hover:bg-white/5 transition-all duration-300">
+              WhatsApp Now
+            </button></a>
           </div>
         </div>
       </section>

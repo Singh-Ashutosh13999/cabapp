@@ -10,23 +10,36 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Left: Logo */}
         <Link href="/" className="text-2xl font-serif font-bold text-white tracking-tight flex-shrink-0">
-          Cab<span className="text-amber-500">Connect</span>
+          Yatra <span className="text-amber-500">Saathi</span>
         </Link>
 
         {/* Middle: Links */}
         <div className="hidden md:flex flex-1 justify-center gap-8">
           <Link href="/" className="text-zinc-300 hover:text-amber-500 text-sm font-medium tracking-wide uppercase transition-colors">Home</Link>
           <Link href="/fleet" className="text-zinc-300 hover:text-amber-500 text-sm font-medium tracking-wide uppercase transition-colors">Our Fleet</Link>
-          <Link href="/services" className="text-zinc-300 hover:text-amber-500 text-sm font-medium tracking-wide uppercase transition-colors">Services</Link>
+          <div className="relative group">
+            <button className="text-zinc-300 hover:text-amber-500 text-sm font-medium tracking-wide uppercase transition-colors flex items-center gap-1">
+              Services
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div className="absolute left-0 mt-4 w-48 bg-zinc-900 border border-zinc-800 rounded-md shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pt-2">
+              <div className="py-2 bg-zinc-900 rounded-md border border-zinc-800">
+                <Link href="/services/city" className="block px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-amber-500 transition-colors">City Rides</Link>
+                <Link href="/services/airport" className="block px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-amber-500 transition-colors">Airport Transfer</Link>
+                <Link href="/services/outstation" className="block px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-amber-500 transition-colors">Outstation</Link>
+                <Link href="/services/corporate" className="block px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-amber-500 transition-colors">Corporate</Link>
+              </div>
+            </div>
+          </div>
           <Link href="/contact" className="text-zinc-300 hover:text-amber-500 text-sm font-medium tracking-wide uppercase transition-colors">Contact</Link>
         </div>
 
         {/* Right: Buttons */}
         <div className="hidden md:flex items-center gap-4 flex-shrink-0">
-          <a href="tel:+1234567890" className="px-4 py-2 border border-zinc-700 text-white text-sm font-bold tracking-wide uppercase hover:bg-zinc-800 transition-colors">
+          <a href="tel:+917839656268" className="px-4 py-2 border border-zinc-700 text-white text-sm font-bold tracking-wide uppercase hover:bg-zinc-800 transition-colors">
             Call Us
           </a>
-          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-amber-500 text-zinc-950 text-sm font-bold tracking-wide uppercase hover:bg-amber-400 transition-colors shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+          <a href="https://wa.me/7839656268" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-amber-500 text-zinc-950 text-sm font-bold tracking-wide uppercase hover:bg-amber-400 transition-colors shadow-[0_0_15px_rgba(245,158,11,0.2)]">
             WhatsApp
           </a>
         </div>
@@ -69,13 +82,39 @@ export default function Navbar() {
             >
               Our Fleet
             </Link>
-            <Link
-              href="/services"
-              className="block px-3 py-2 text-base font-medium text-zinc-300 hover:text-amber-500 hover:bg-zinc-900 rounded-md transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Services
-            </Link>
+            <div className="space-y-1">
+              <div className="px-3 py-2 text-base font-medium text-zinc-300">Services</div>
+              <div className="pl-4 space-y-1 border-l-2 border-zinc-800 ml-4">
+                <Link
+                  href="/services/city"
+                  className="block px-3 py-2 text-sm font-medium text-zinc-400 hover:text-amber-500 hover:bg-zinc-900 rounded-md transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  City Rides
+                </Link>
+                <Link
+                  href="/services/airport"
+                  className="block px-3 py-2 text-sm font-medium text-zinc-400 hover:text-amber-500 hover:bg-zinc-900 rounded-md transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Airport Transfer
+                </Link>
+                <Link
+                  href="/services/outstation"
+                  className="block px-3 py-2 text-sm font-medium text-zinc-400 hover:text-amber-500 hover:bg-zinc-900 rounded-md transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Outstation
+                </Link>
+                <Link
+                  href="/services/corporate"
+                  className="block px-3 py-2 text-sm font-medium text-zinc-400 hover:text-amber-500 hover:bg-zinc-900 rounded-md transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Corporate
+                </Link>
+              </div>
+            </div>
             <Link
               href="/contact"
               className="block px-3 py-2 text-base font-medium text-zinc-300 hover:text-amber-500 hover:bg-zinc-900 rounded-md transition-colors"

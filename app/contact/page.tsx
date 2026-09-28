@@ -104,7 +104,7 @@ export default function ContactPage() {
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </div>
                 <h3 className="text-white font-bold mb-2 uppercase tracking-wide text-sm">Email Support</h3>
-                <p className="text-zinc-400 text-sm">bookings@cabconnect.in<br />support@cabconnect.in<br />corporate@cabconnect.in</p>
+                <p className="text-zinc-400 text-sm">bookings@yatrasaathi.in<br />support@yatrasaathi.in<br />corporate@yatrasaathi.in</p>
               </div>
 
               <div className="bg-zinc-900 border border-zinc-800 p-6 rounded-sm hover:border-amber-500 transition-colors group">
