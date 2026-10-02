@@ -28,17 +28,17 @@ export const cities: CityData[] = [
   },
   {
     cityName: "Pune",
-    image: "https://images.unsplash.com/photo-1596700755745-0d2e82f5043a?auto=format&fit=crop&w=1200&q=80",
+    image: "/img/pune-images.jpeg",
     description: "Oxford of the East"
   },
   {
     cityName: "Chandigarh",
-    image: "https://images.unsplash.com/photo-1549424840-7e50073010b9?auto=format&fit=crop&w=1200&q=80",
+    image: "/img/chandigarh.jpeg",
     description: "The beautiful city"
   },
   {
     cityName: "Varanasi",
-    image: "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?q=80&w=2070&auto=format&fit=crop",
+    image: "/img/varanasi.jpeg",
     description: "The spiritual capital of India"
   },
   {
@@ -53,7 +53,7 @@ export const cities: CityData[] = [
   },
   {
     cityName: "Lucknow",
-    image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=2070&auto=format&fit=crop",
+    image: "/img/lucknow.jpeg",
     description: "The city of Nawabs"
   },
   {
@@ -63,7 +63,7 @@ export const cities: CityData[] = [
   },
   {
     cityName: "Hyderabad",
-    image: "https://images.unsplash.com/photo-1572445271230-a78b5944a659?q=80&w=2070&auto=format&fit=crop",
+    image: "/img/hyderabad.jpeg",
     description: "The city of pearls"
   },
   {
@@ -130,7 +130,7 @@ export const routes: Route[] = [
     duration: "8 hrs",
     image: "https://images.unsplash.com/photo-1609947017136-9daf32a5eb16?q=80&w=2070&auto=format&fit=crop"
   },
-  { id: "6", slug: "mumbai-to-pune", from: "Mumbai", to: "Pune", distance: "150 km", price: 2000, duration: "3 hrs", image: "https://images.unsplash.com/photo-1605206411516-7f893e4e9766?q=80&w=2070&auto=format&fit=crop" },
+
   {
     id: "7",
     slug: "mumbai-to-pune",
@@ -183,8 +183,8 @@ export const routes: Route[] = [
   }
   ,
 
-  { id: "12", slug: "pune-to-mahableshwar", from: "Pune", to: "Mahableshwar", distance: "120 km", price: 2500, duration: "3 hrs", image: "https://images.unsplash.com/photo-1542385262-cdf06b2db715?q=80&w=2071&auto=format&fit=crop" },
-  { id: "13", slug: "chandigarh-to-shimla", from: "Chandigarh", to: "Shimla", distance: "115 km", price: 2800, duration: "3.5 hrs", image: "https://images.unsplash.com/photo-1626244498305-b0409a63273e?q=80&w=2070&auto=format&fit=crop" },
+  { id: "12", slug: "pune-to-mahableshwar", from: "Pune", to: "Mahableshwar", distance: "120 km", price: 2500, duration: "3 hrs", image: "/img/pune-mahabaleshwar.jpeg" },
+  { id: "13", slug: "chandigarh-to-shimla", from: "Chandigarh", to: "Shimla", distance: "115 km", price: 2800, duration: "3.5 hrs", image: "/img/chandi-shimla.jpeg" },
   {
     id: "14",
     slug: "varanasi-to-prayagraj",

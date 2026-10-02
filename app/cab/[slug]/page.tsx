@@ -6,6 +6,7 @@ import CabHero from '@/components/CabHero';
 import CabFeatures from '@/components/CabFeatures';
 import CabBookingCard from '@/components/CabBookingCard';
 import ImageSection from '@/components/ImageSection';
+import FAQ from '@/components/FAQ';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -59,7 +60,7 @@ export default async function CabRoutePage({ params }: Props) {
     offers: {
       '@type': 'Offer',
       price: route.price,
-      priceCurrency: 'USD',
+      priceCurrency: 'INR',
       availability: 'https://schema.org/InStock',
     },
   };
@@ -81,6 +82,14 @@ export default async function CabRoutePage({ params }: Props) {
         <CabFeatures features={route.features || []} />
         <CabBookingCard price={route.price} routeSlug={route.slug} />
         <ImageSection images={route.galleryImages} />
+        <FAQ
+          type="route"
+          routeInfo={{
+            title: route.title,
+            distance: route.distance,
+            estimatedTime: route.estimatedTime
+          }}
+        />
       </div>
     </div>
   );

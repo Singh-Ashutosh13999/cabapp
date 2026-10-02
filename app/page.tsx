@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import PopularDestinations from '@/components/PopularDestinations';
 import HeroBookingCard from '@/components/HeroBookingCard';
+import FAQ from '@/components/FAQ';
 import { cities } from '@/data/cabsData';
 
 export const revalidate = 3600;
@@ -204,6 +205,9 @@ export default function Home() {
           )}
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ type="home" />
 
       {/* CTA Section */}
       <section className="bg-zinc-950 py-16 relative overflow-hidden">
