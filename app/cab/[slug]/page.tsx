@@ -8,6 +8,8 @@ import CabBookingCard from '@/components/CabBookingCard';
 import ImageSection from '@/components/ImageSection';
 import FAQ from '@/components/FAQ';
 
+
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -79,6 +81,7 @@ export default async function CabRoutePage({ params }: Props) {
           description={route.description}
           imageUrl={route.imageUrl}
         />
+
         <CabFeatures features={route.features || []} />
         <CabBookingCard price={route.price} routeSlug={route.slug} />
         <ImageSection images={route.galleryImages} />

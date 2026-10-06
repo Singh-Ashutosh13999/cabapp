@@ -3,6 +3,7 @@ import PopularDestinations from '@/components/PopularDestinations';
 import HeroBookingCard from '@/components/HeroBookingCard';
 import FAQ from '@/components/FAQ';
 import { cities } from '@/data/cabsData';
+import AIConcierge from "@/components/ai-concierge/AIConcierge";
 
 export const revalidate = 3600;
 
@@ -41,10 +42,13 @@ export default function Home() {
               </a>
             </div>
           </div>
+
           <div className="w-full lg:w-2/5">
             <HeroBookingCard />
           </div>
+
         </div>
+        <AIConcierge />
         {/* Decorative elements */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-zinc-50 to-transparent"></div>
       </section>
